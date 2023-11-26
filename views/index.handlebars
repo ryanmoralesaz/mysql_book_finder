@@ -1,0 +1,14 @@
+<!-- views/index.handlebars -->
+<html>
+  <body>
+    <h1>Find Author's Birthdate by Book Title</h1>
+    <form action="/books" method="get">
+      <input type="text" name="title" placeholder="Enter Book Title" required />
+      <button type="submit">Find</button>
+    </form>
+
+    {{#if author}}
+      <p>Birthdate: {{author.dob}}</p>
+    {{/if}}
+  </body>
+</html>
